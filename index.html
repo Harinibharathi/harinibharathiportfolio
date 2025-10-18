@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harini Bharathi | Power BI Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif;}
+    body {background-color:#f8f9fa; color:#222; line-height:1.6;}
+    header {background-color:#0078d4; color:#fff; padding:2rem 1rem; text-align:center;}
+    header h1 {font-size:2rem;}
+    header p {font-size:1rem; margin-top:0.5rem;}
+    nav {background-color:#fff; display:flex; justify-content:center; padding:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.1); position:sticky; top:0; z-index:100;}
+    nav a {color:#0078d4; text-decoration:none; margin:0 1rem; font-weight:600;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:3rem 1.5rem; max-width:1000px; margin:auto;}
+    .about {text-align:center;}
+    .about img {width:150px; height:150px; border-radius:50%; object-fit:cover; margin-bottom:1rem;}
+    .projects {background-color:#eef3f8; border-radius:12px; padding:2rem;}
+    .project-card {background-color:#fff; padding:1.5rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-bottom:1.5rem; transition:transform 0.2s;}
+    .project-card:hover {transform:scale(1.02);}
+    .project-card h3 {color:#0078d4; margin-bottom:0.5rem;}
+    .project-card p {font-size:0.95rem; margin-bottom:0.5rem;}
+    .contact {text-align:center;}
+    .contact a {color:#0078d4; text-decoration:none; font-weight:600;}
+    footer {text-align:center; padding:1rem; background-color:#0078d4; color:#fff; margin-top:2rem;}
+    .btn {display:inline-block; background-color:#0078d4; color:white; padding:0.8rem 1.2rem; border-radius:6px; text-decoration:none; margin-top:1rem; font-weight:600;}
+    .btn:hover {background-color:#005fa3;}
+    #popup {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); justify-content:center; align-items:center; z-index:9999;}
+    #popup img {max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 0 15px #000;}
+    #closePopup {position:absolute; top:20px; right:30px; color:white; font-size:2rem; cursor:pointer;}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Harini Bharathi</h1>
+    <p>Power BI Developer | Business Analyst | Data Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about">
+    <img src="C:\Users\harin\Desktop\Portfolio\HB.jpeg">
+    <h2>About Me</h2>
+    <p>Hi, I’m <b>Harini Bharathi</b>, a Power BI Developer passionate about transforming data into powerful business insights.</p>
+    <p><b>Skills:</b> Power BI | DAX | Excel | SQL | Python </p>
+    <a href="C:\Users\harin\Desktop\JOB\Harini Bharathi BA(10).pdf"class="btn" download>Download Resume</a>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 style="text-align:center; margin-bottom:1.5rem;">My Power BI Projects</h2>
+
+    <div id="popup">
+      <span id="closePopup">&times;</span>
+      <img id="popupImg" src="" alt="Dashboard Preview">
+    </div>
+
+    <div class="project-card">
+      <h3>📊 Productivity Survey Dashboard</h3>
+      <p><b>Goal:</b> Analyze productivity survey data and highlight key engagement factors.</p>
+      <p><b>Key Insights:</b> Distractions such as social media (34%) and poor time management (24%) are the main challenges affecting productivity. Most respondents feel moderately productive, while activities like taking breaks, exercising, and meditation improve focus. About 60% say productivity is very important to their happiness.</p>
+      <p><b>Tools:</b> Power BI, DAX, Excel</p>
+      <a href="#" class="btn" onclick="openPopup('productivity.png')">View Dashboard</a>
+    </div>
+
+    <div class="project-card">
+      <h3>🛡️ Cyber Security Dashboard</h3>
+      <p><b>Goal:</b> Visualize cyber threat trends and identify high-risk areas.</p>
+      <p><b>Key Insights:</b> Over 2 billion users were affected globally with $151.48K million in financial loss. Phishing and malware dominate the threat landscape. Banking and government sectors report the highest losses, while the average incident resolution time is 36 hours.</p>
+      <p><b>Tools:</b> Power BI, DAX, Excel</p>
+      <a href="#" class="btn" onclick="openPopup('cybersecurity.jpeg')">View Dashboard</a>
+    </div>
+
+    <div class="project-card">
+      <h3>💰 Financial Report Dashboard</h3>
+      <p><b>Goal:</b> Track revenue, profit, and expense KPIs for data-driven decisions.</p>
+      <p><b>Key Insights:</b> Total sales reached $1.18B with a profit margin of 16.59%. Medium discount band generated the highest revenue (≈33%), while the enterprise segment contributed 44% of total sales. Paseo is the best-selling product, and the U.S. and Canada are top-performing countries.</p>
+      <p><b>Tools:</b> Power BI, Power Query, Excel</p>
+      <a href="#" class="btn" onclick="openPopup('Financial.png')">View Dashboard</a>
+    </div>
+
+    <div class="project-card">
+      <h3>🍕 Pizza Sales Dashboard</h3>
+      <p><b>Goal:</b> Analyze pizza sales performance and customer behavior across regions.</p>
+      <p><b>Key Insights:</b> Total sales of $189.48K across five U.S. states, with California and Nevada leading. Kyle Carr and Dan Peterson are top managers (21% each). Hot Pepperoni and Chicken Supreme pizzas generate the highest revenue, with consistent sales meeting daily targets.</p>
+      <p><b>Tools:</b> Power BI, DAX, Power Query</p>
+      <a href="#" class="btn" onclick="openPopup('pizza.png')">View Dashboard</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>📧 <a href="mailto:harinibharathi@example.com">harinibharathi@example.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com">LinkedIn</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Harini Bharathi | Designed with ❤️ using HTML & CSS</p>
+  </footer>
+
+  <script>
+    function openPopup(imgSrc) {
+      document.getElementById("popupImg").src = imgSrc;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    document.getElementById("closePopup").onclick = function() {
+      document.getElementById("popup").style.display = "none";
+    };
+
+    document.getElementById("popup").onclick = function(e) {
+      if (e.target.id === "popup") {
+        document.getElementById("popup").style.display = "none";
+      }
+    };
+  </script>
+
+</body>
+</html>
